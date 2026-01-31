@@ -1,23 +1,495 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <!-- Schema.org 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "headline": "2026년 충치치료 가격 | 평균 비용 및 종류별 견적 비교",
+    "description": "2026년 최신 충치치료 가격 정보를 분석합니다. 레진, 인레이, 크라운 등 치료 종류별 평균 비용과 충치치료 잘하는 치과를 찾는 방법, 건강보험 적용 여부까지 상세하게 비교하여 알려드립니다. 내돈내산 후기와 저렴한 곳 찾는 팁, 장단점 분석 포함.",
+    "url": "https://www.example.com/cavity-price-guide-2026",
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+    "author": {
+      "@type": "Organization",
+      "name": "대한치과정보센터"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.example.com/cavity-price-guide-2026"
+    },
+    "medicalSpecialty": "Dentistry",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "충치",
+      "alternateName": "치아우식증",
+      "description": "치아우식증(충치)은 구강 내 세균에 의해 치아가 손상되는 질환입니다."
+    },
+    "hasPart": [
+      {
+        "@type": "WebPageElement",
+        "name": "레진 치료 가격",
+        "description": "레진 치료의 평균 비용과 장단점을 분석합니다."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "인레이 치료 가격",
+        "description": "인레이 치료의 종류별(레진, 골드, 세라믹) 가격과 장단점을 비교합니다."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "크라운 치료 가격",
+        "description": "크라운 치료의 종류별(PFM, 골드, 지르코니아) 가격과 장단점을 비교합니다."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="canonical" href="https://www.example.com/cavity-price-guide-2026">
+
+  <!-- CSS (Modern, Clean Design) -->
+  <style>
+    :root {
+      --primary-color: #007bff; /* Soft Blue */
+      --secondary-color: #6c757d; /* Soft Gray */
+      --background-color: #f8f9fa; /* Light Background */
+      --text-color: #333;
+      --heading-color: #2c3e50; /* Darker Blue-Gray */
+      --border-color: #dee2e6;
+      --section-bg: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    body {
+      font-family: 'Malgun Gothic', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-size: 16px;
+      word-break: keep-all;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--secondary-color);
+      padding: 15px 20px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+    section {
+      background-color: var(--section-bg);
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 10px;
+      margin-top: 0;
+      font-size: 2em;
+    }
+    h3 {
+      color: var(--heading-color);
+      margin-top: 25px;
+      font-size: 1.5em;
+    }
+    h4 {
+      color: var(--primary-color);
+      font-size: 1.2em;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--primary-color);
+      color: #fff;
+      font-weight: bold;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    tr:nth-child(even) td {
+      background-color: #f1f1f1;
+    }
+    .alert {
+      background-color: #e9ecef;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    /* FAQ Section Styles */
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background-color: #f1f1f1;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question:hover {
+      background-color: #e9e9e9;
+    }
+    .faq-answer {
+      padding: 15px;
+      background-color: var(--section-bg);
+      display: none; /* JavaScript controlled visibility */
+    }
+    .faq-arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-arrow {
+      transform: rotate(180deg);
+    }
+    /* Form Styles */
+    form {
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    input[type="text"], input[type="tel"], textarea {
+      width: calc(100% - 24px);
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6c757d;
+      font-size: 0.9em;
+    }
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      .container { padding: 10px; }
+      nav ul { flex-direction: column; }
+      nav a { text-align: center; border-bottom: 1px solid #eee; }
+      header h1 { font-size: 2em; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>2026년 충치치료 가격 | 평균 비용 및 종류별 견적 비교</h1>
+      <p>치과 치료, 더 이상 비싸게 하지 마세요. 2026년 최신 기준으로 레진, 인레이, 크라운 등 치료별 <strong>평균 비용</strong>을 분석하고, <strong>건강보험 적용</strong> 여부와 <strong>저렴한 곳</strong>을 찾는 노하우를 공개합니다.</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#intro">충치치료 개요</a></li>
+        <li><a href="#type">치료 종류별 비용 비교</a></li>
+        <li><a href="#factors">가격 결정 요인</a></li>
+        <li><a href="#cheap-guide">저렴하게 치료받는 법</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#contact">온라인 상담 신청</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container">
+
+    <!-- Section 1: Introduction -->
+    <section id="intro">
+      <h2>2026년 충치치료 가격 가이드: 현명하게 비용 절감하기</h2>
+      <p>충치(치아우식증)는 흔한 질병이지만, 치료 시기를 놓치면 치료 난이도가 높아져 <strong>충치치료 비용</strong>이 기하급수적으로 증가합니다. 특히 충치의 심각도에 따라 <strong>레진</strong>, <strong>인레이</strong>, <strong>크라운</strong>, <strong>신경치료</strong> 등 다양한 치료법이 적용되며, 이에 따른 <strong>가격대</strong>도 크게 달라집니다. 본 가이드에서는 2026년 최신 기준으로 각 치료법의 <strong>평균 비용</strong>과 <strong>장점</strong>, <strong>단점</strong>을 상세히 비교하고, <strong>건강보험 적용</strong> 여부 및 <strong>치과 추천</strong> 기준을 제시하여 독자들이 합리적인 <strong>충치치료 견적</strong>을 받을 수 있도록 돕습니다.</p>
+      <p>많은 분들이 충치치료 <strong>가격</strong>에 대해 궁금해하시지만, 치과마다, 그리고 환자의 치아 상태에 따라 <strong>금액</strong>이 천차만별입니다. 특히 비급여 항목인 보철치료의 경우 <strong>비용</strong> 차이가 크기 때문에, 여러 치과를 방문하여 <strong>비교</strong>하고 <strong>견적</strong>을 받아보는 것이 중요합니다. 이 글을 통해 충치치료 <strong>싼곳</strong>을 찾는 노하우와 <strong>내돈내산</strong> 후기를 바탕으로 한 정보를 얻어가시길 바랍니다.</p>
+    </section>
+
+    <!-- Section 2: Treatment Types and Pricing Comparison -->
+    <section id="type">
+      <h2>충치치료 종류별 2026년 평균 가격 비교</h2>
+      <p>충치치료는 충치의 깊이와 위치에 따라 치료 방법이 달라집니다. 초기 충치는 간단한 충전으로 해결할 수 있지만, 신경까지 진행된 심각한 충치는 신경치료와 크라운이 필요합니다. 각 치료 종류별 <strong>평균 가격</strong>(2026년 기준)과 <strong>장단점</strong>을 상세히 분석하여 현명한 선택을 돕겠습니다.</p>
+
+      <!-- Sub-section 2-1: 레진 치료 (Resin Filling) -->
+      <h3 id="resin">1. 레진 치료 (충치 초기, 간단한 충전)</h3>
+      <p>레진(Composite Resin)은 치아 색상과 유사하여 심미성이 뛰어나고, 충치 부위만 최소한으로 삭제하여 치료합니다. 주로 <strong>충치 초기</strong> 단계에 적용되며, 씹는 힘이 덜 가해지는 앞니나 작은 어금니 충치에 적합합니다. 2019년 1월부터 만 12세 이하 어린이는 영구치 레진 치료 시 건강보험이 적용되어 <strong>저렴한 금액</strong>으로 치료받을 수 있습니다. 성인의 경우 비급여 항목으로 분류되어 <strong>평균 비용</strong>은 치과마다 차이가 큽니다.</p>
+      <ul>
+        <li><strong>적용 범위:</strong> 충치가 법랑질(치아 표면)에만 있거나 상아질 초기에 도달했을 때.</li>
+        <li><strong>장점:</strong> 심미성이 우수하고, 치아 삭제량이 적으며, 당일 치료가 가능합니다.</li>
+        <li><strong>단점:</strong> 씹는 힘이 강한 부위에는 내구성이 약해 잘 깨질 수 있습니다. 시간이 지나면 변색되거나 닳을 수 있습니다.</li>
+      </ul>
+      <h4>레진 치료 2026년 예상 가격 (성인 비급여 기준)</h4>
+      <p><strong>평균 가격:</strong> 7만 원 ~ 15만 원</p>
+      <div class="alert">
+        <strong>[꿀팁] 건강보험 적용 여부 확인:</strong> 만 12세 이하 어린이의 영구치 레진 충전은 건강보험이 적용됩니다. 성인의 경우, 충치치료가 아닌 치경부 마모증(풍치)으로 인한 치아 충전은 급여 적용이 가능한 경우가 있으므로 반드시 치과에 문의하여 <strong>보험 적용 여부</strong>를 확인해야 합니다.
+      </div>
+
+      <!-- Sub-section 2-2: 인레이/온레이 치료 (Inlay/Onlay) -->
+      <h3 id="inlay">2. 인레이/온레이 치료 (중기 충치)</h3>
+      <p>충치가 법랑질을 넘어 상아질까지 진행되었을 때 적용되는 치료입니다. 충치 부위를 삭제한 후 본을 떠서 치아 모형을 제작하고, 이를 치아에 접착하는 방식입니다. 인레이는 치아 씹는 면의 골짜기에 충전물을 덧대는 방식이고, 온레이는 충치가 넓어 치아 씹는 면 전체를 덮는 방식입니다. 사용되는 재료에 따라 <strong>가격</strong>과 <strong>장단점</strong>이 크게 달라집니다.</p>
+      <ul>
+        <li><strong>적용 범위:</strong> 충치 범위가 넓어 레진으로 채우기 어려울 때.</li>
+        <li><strong>장점:</strong> 레진보다 내구성이 강하고, 치아 형태를 정교하게 복원할 수 있습니다.</li>
+        <li><strong>단점:</strong> 2회 이상 내원해야 하며, 비용이 레진보다 높습니다.</li>
+      </ul>
+      <h4>인레이 재료별 2026년 예상 가격 (비급여 기준)</h4>
+      <table id="inlay-price-table">
+        <tr><th>재료 종류</th><th>특징</th><th>2026년 평균 가격대</th><th>추천 대상</th></tr>
+        <tr><td>레진 인레이</td><td>치아색, 심미성 우수, 비교적 저렴</td><td>15만 원 ~ 25만 원</td><td>심미성을 중요시하는 환자, 씹는 힘이 약한 부위</td></tr>
+        <tr><td>골드 인레이</td><td>가장 높은 내구성, 생체 친화적, 비심미적</td><td>25만 원 ~ 40만 원</td><td>씹는 힘이 강한 어금니, 금속 알러지 환자(일반 금속X)</td></tr>
+        <tr><td>세라믹 인레이</td><td>심미성 우수, 변색 없음, 강도 높음 (단, 골드보다는 약함)</td><td>20만 원 ~ 35만 원</td><td>심미성과 강도를 모두 원하는 환자</td></tr>
+      </table>
+      <p><strong>가격 차이점:</strong> <strong>레진 인레이</strong>는 비교적 <strong>저렴한 비용</strong>으로 심미성을 챙길 수 있지만, <strong>골드 인레이</strong>는 씹는 힘이 강한 어금니에 최적화된 높은 내구성을 자랑합니다. <strong>세라믹 인레이</strong>는 골드의 강도와 레진의 심미성을 절충한 형태입니다.</p>
+
+      <!-- Sub-section 2-3: 크라운 치료 (Crown) -->
+      <h3 id="crown">3. 크라운 치료 (심각한 충치 또는 신경치료 후)</h3>
+      <p>크라운(Crown) 치료는 충치로 인해 치아가 광범위하게 손상되거나, 신경치료를 받은 후 치아를 보호하기 위해 치아 전체를 씌우는 보철 치료입니다. 치아의 형태와 기능을 완전히 회복시켜주는 치료법이지만, <strong>비용</strong>이 가장 높고, 치아를 많이 삭제해야 합니다.</p>
+      <ul>
+        <li><strong>적용 범위:</strong> 충치가 치수(신경)까지 진행되었거나, 치아가 깨져 치아 형태를 유지할 수 없을 때.</li>
+        <li><strong>장점:</strong> 치아의 기능을 완벽하게 회복시키고, 치아를 외부 충격으로부터 보호합니다.</li>
+        <li><strong>단점:</strong> <strong>높은 금액</strong> 부담, 치아 삭제량 많음, 재료에 따라 수명이 다릅니다.</li>
+      </ul>
+      <h4>크라운 재료별 2026년 예상 가격 (비급여 기준)</h4>
+      <table id="crown-price-table">
+        <tr><th>재료 종류</th><th>특징</th><th>2026년 평균 가격대</th><th>추천 대상</th></tr>
+        <tr><td>PFM (금속+도자기)</td><td>내부 금속, 외부 도자기. 심미성 보통, 내구성 보통, 가장 <strong>저렴</strong>한 크라운</td><td>30만 원 ~ 45만 원</td><td>가성비가 중요한 경우, 어금니 안쪽 부위</td></tr>
+        <tr><td>골드 크라운</td><td>금속, 내구성 우수, 씹는 힘 흡수, 비심미적, <strong>가격</strong> 높은 편</td><td>40만 원 ~ 60만 원</td><td>씹는 힘이 강한 어금니, 금속 알러지 환자(일반 금속X)</td></tr>
+        <tr><td>지르코니아 크라운</td><td>치아색, 강도 우수, 심미성 우수, <strong>가장 높은 가격</strong></td><td>45만 원 ~ 70만 원</td><td>심미성과 강도를 모두 중요시하는 경우 (앞니/어금니 모두)</td></tr>
+      </table>
+      <p><strong>지르코니아 크라운 장점:</strong> 지르코니아는 최근 가장 선호되는 크라운 재료입니다. 기존 PFM의 단점(금속 노출, 잇몸 변색)을 보완하면서도 골드에 준하는 강도를 가집니다. 다만 <strong>지르코니아 가격</strong>은 PFM에 비해 높은 편입니다.</p>
+
+      <!-- Sub-section 2-4: 신경치료 (Root Canal Treatment) -->
+      <h3 id="nerve">4. 신경치료 (Root Canal Treatment)</h3>
+      <p>신경치료는 충치가 치수(신경)까지 깊이 침범하여 극심한 통증을 유발할 때 시행하는 치료입니다. 충치치료의 가장 마지막 단계이며, 신경관 내부의 염증을 제거하고 소독한 뒤, 빈 공간을 충전합니다. 신경치료 후에는 반드시 치아가 깨지는 것을 방지하기 위해 크라운 치료를 병행해야 합니다. 신경치료 자체는 건강보험이 적용되지만, 신경치료 후의 크라운은 비급여 항목입니다.</p>
+      <ul>
+        <li><strong>적용 범위:</strong> 충치가 치수까지 진행되어 신경이 손상된 경우.</li>
+        <li><strong>특징:</strong> 치아를 살리는 마지막 방법. 여러 번 내원 필요.</li>
+        <li><strong>비용:</strong> 신경치료 자체는 급여 항목 (본인 부담금 1~3만원 내외). 크라운은 비급여 항목.</li>
+      </ul>
+    </section>
+
+    <!-- Section 3: Pricing Factors and Considerations -->
+    <section id="factors">
+      <h2>충치치료 가격에 영향을 미치는 핵심 요인 분석</h2>
+      <p>똑같은 치료라도 치과마다 <strong>충치치료 금액</strong>이 다른 이유는 무엇일까요? <strong>충치치료 견적</strong>을 결정하는 여러 가지 요인들을 이해하면 <strong>저렴한 곳</strong>을 찾거나 불필요한 과잉진료를 피하는 데 도움이 됩니다. 충치치료 <strong>평균 가격</strong>을 형성하는 주요 <strong>차이점</strong>들을 확인하세요.</p>
+
+      <h4>1. 치과의 규모와 위치</h4>
+      <p>일반적으로 대형 치과병원이나 대학병원은 개인 치과 의원보다 <strong>가격</strong>이 높은 편입니다. 임대료가 비싼 강남, 압구정 등의 지역에 위치한 치과도 <strong>비용</strong>이 높게 책정될 수 있습니다. <strong>저렴한곳</strong>을 찾는다면 대도시 외곽 지역이나, 개원한 지 얼마 안 된 치과를 <strong>비교</strong>해 볼 수 있습니다.</p>
+
+      <h4>2. 충치의 심각도와 치료 범위</h4>
+      <p>치료 <strong>금액</strong>은 충치의 진행 정도에 비례하여 증가합니다. 초기 충치(레진)는 <strong>비용</strong>이 낮지만, 중기 충치(인레이), 심각한 충치(크라운 및 신경치료)로 갈수록 <strong>가격대</strong>가 높아집니다. 치아 상태에 따라 <strong>충치치료 견적</strong>이 달라지므로, 치과 의사의 정확한 진단이 중요합니다.</p>
+
+      <h4>3. 재료 선택의 차이 (비급여 항목)</h4>
+      <p>레진, 인레이, 크라운 등 비급여 치료의 경우 사용되는 재료의 종류에 따라 <strong>가격</strong>이 크게 달라집니다. <strong>장점</strong>과 <strong>단점</strong>을 고려하여 환자의 구강 환경에 가장 적합한 재료를 선택하는 것이 중요합니다. 예를 들어, 어금니 크라운의 경우 심미성이 낮은 <strong>PFM 크라운</strong>이 가장 <strong>저렴한 비용</strong>이지만, 내구성이 좋은 <strong>지르코니아</strong>나 <strong>골드</strong>는 <strong>가격</strong>이 높습니다. <strong>내돈내산 후기</strong>를 참고하여 재료의 <strong>장단점</strong>을 충분히 숙지해야 합니다.</p>
+
+      <h4>4. 건강보험 적용 유무</h4>
+      <p>건강보험이 적용되는 항목(급여)과 적용되지 않는 항목(비급여)이 명확히 구분됩니다. 성인의 경우 충치치료 시 레진, 인레이, 크라운 등 보철치료는 대부분 비급여 항목입니다. 하지만 만 12세 이하 어린이의 영구치 레진 충전이나, 신경치료 자체, 스케일링 등은 건강보험이 적용되므로 <strong>비용</strong> 부담이 크게 줄어듭니다. 환자 본인이 <strong>건강보험 가입</strong> 여부를 확인하고, 치과에서 급여 항목을 먼저 문의하는 것이 좋습니다.</p>
+      <div class="alert">
+        <strong>[자료 참고]</strong> 국민건강보험공단 <a href="https://www.nhis.or.kr/" target="_blank">NHIS.or.kr</a>에서는 급여/비급여 항목을 상세히 안내하고 있습니다.
+      </div>
+    </section>
+    
+    <!-- Section 4: Tips for Finding Affordable Treatment -->
+    <section id="cheap-guide">
+      <h2>현명하게 충치치료 저렴한 곳 찾는 노하우 (feat. 내돈내산 후기)</h2>
+      <p><strong>충치치료 가격</strong>은 비급여 항목이 많아 <strong>치과 추천</strong>을 받아도 <strong>견적</strong>이 천차만별입니다. <strong>내돈내산 후기</strong>를 보면 같은 치료라도 <strong>저렴한 곳</strong>과 <strong>싼곳</strong>을 찾는 노하우가 존재합니다. <strong>충치치료 저렴한곳</strong>을 찾는 분들을 위해 몇 가지 팁을 소개합니다.</p>
+
+      <h4>1. 여러 치과 방문을 통한 견적 비교 (최소 2~3곳)</h4>
+      <p>충치치료 <strong>가격</strong>을 <strong>비교</strong>하는 가장 확실한 방법입니다. 단순히 <strong>충치치료 비용</strong>이 <strong>싼곳</strong>을 찾기보다는, 꼼꼼하게 진료하는 곳을 찾는 것이 중요합니다. 여러 치과에서 진단을 받고, 제시된 <strong>충치치료 견적</strong>을 비교하여 <strong>평균 금액</strong>을 확인하세요. 이 과정에서 과잉 진료 여부를 판단할 수 있는 <strong>장점</strong>이 있습니다.</p>
+
+      <h4>2. 치과 이벤트 및 할인 활용</h4>
+      <p>많은 치과들이 개원 이벤트나 특정 기간 동안 <strong>충치치료 비용</strong> 할인 행사를 진행합니다. <strong>충치치료 싼곳</strong>을 찾는다면 이러한 이벤트를 활용할 수 있지만, 지나치게 <strong>저렴한 금액</strong>에 현혹되기보다는 치료의 질과 사후관리를 <strong>비교</strong>해야 합니다. 이벤트 <strong>가격</strong>이 <strong>평균 가격</strong>보다 많이 낮은 경우, 재료의 질이나 의료진의 숙련도를 확인해야 하는 <strong>단점</strong>이 있습니다.</p>
+
+      <h4>3. 치과 위치 및 전문의 확인</h4>
+      <p>위치에 따른 <strong>가격 차이점</strong>을 인지하세요. 도심 번화가보다는 주거 밀집 지역의 치과가 상대적으로 <strong>저렴한 금액</strong>인 경우가 많습니다. 또한 전문의 여부가 중요합니다. 보존과 전문의는 충치를 치료하고 치아를 보존하는 데 특화되어 있어, 까다로운 충치치료나 신경치료에 전문성이 높습니다. <strong>치과 추천 순위</strong>를 볼 때 의료진의 이력을 확인하는 것이 좋습니다.</p>
+
+      <h4>4. 실비보험 및 치아보험 확인</h4>
+      <p>개인이 가입한 실비보험이나 치아보험에서 <strong>충치치료 비용</strong>을 보장받을 수 있는지 확인하세요. 대부분의 치아보험은 비급여 항목인 크라운, 인레이 치료에 대해 보장을 합니다. 보험 가입 당시의 약관을 확인하여 <strong>가입</strong> 시 보장 내용을 숙지하는 것이 <strong>장점</strong>입니다.</p>
+    </section>
+
+    <!-- Section 5: External Links & Authority Content -->
+    <section id="external-references">
+      <h2>공신력 있는 외부 자료 및 참고문헌</h2>
+      <p>충치치료 <strong>가격</strong> 및 정보에 대해 더 깊이 있는 정보를 얻고 싶다면 다음 공신력 있는 기관의 자료를 참고할 수 있습니다. <strong>치과 추천</strong>이나 <strong>후기</strong>에 앞서 정확한 의료 정보를 습득하는 것이 중요합니다.</p>
+      <ul>
+        <li><a href="https://namu.wiki/w/%EC%B6%A9%EC%B9%98" target="_blank">나무위키 - 충치 (치아우식증)</a>: 충치의 정의, 원인, 진행 과정 등 기본적인 정보를 알 수 있습니다.</li>
+        <li><a href="https://www.nhis.or.kr/" target="_blank">국민건강보험공단</a>: 건강보험 적용 항목 및 본인부담금 기준을 정확하게 확인할 수 있습니다.</li>
+        <li><a href="http://www.kda.or.kr/" target="_blank">대한치과의사협회 (KDA)</a>: 치과 관련 전문 정보와 최신 치의학 정보를 얻을 수 있습니다.</li>
+        <li><a href="http://www.koas.or.kr/" target="_blank">대한치과보존학회</a>: 치과 보존 치료(충치치료, 신경치료)에 대한 전문적인 학술 정보를 확인할 수 있습니다.</li>
+        <li><a href="https://www.hira.or.kr/" target="_blank">건강보험심사평가원 (HIRA)</a>: 비급여 진료비 <strong>평균 가격</strong>을 확인할 수 있으며, 치과별 <strong>비용</strong> 정보를 <strong>비교</strong>해 볼 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6: FAQ (Frequently Asked Questions) -->
+    <section id="faq" class="faq-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <div class="faq-question">Q1: 충치치료 가격, 왜 치과마다 차이가 큰가요?<span class="faq-arrow">▼</span></div>
+        <div class="faq-answer">A: <strong>충치치료 가격</strong>은 비급여 항목인 경우가 많아 치과가 <strong>자율적으로 가격을 책정</strong>하기 때문입니다. 특히 인레이나 크라운 치료 재료(골드, 지르코니아, 세라믹)의 <strong>가격</strong>이 치과 공급가에 따라 달라지고, 치과의 임대료나 의료진의 숙련도 등 여러 요인이 <strong>비용</strong>에 포함됩니다. <strong>저렴한 곳</strong>을 찾더라도 단순히 <strong>가격</strong>만 <strong>비교</strong>하지 말고, 치료 경험이 풍부한 의료진에게 <strong>치과 추천</strong>을 받는 것이 중요합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q2: 충치치료 시 신경치료와 크라운은 무조건 함께 해야 하나요?<span class="faq-arrow">▼</span></div>
+        <div class="faq-answer">A: 신경치료 후에는 치아의 신경이 제거되어 수분 공급이 끊기고 약해집니다. 이 상태에서 음식을 씹으면 치아가 쉽게 부러질 수 있어, 대부분의 경우 치아를 보호하기 위해 크라운 치료를 병행합니다. 따라서 신경치료를 한다면 크라운 치료도 함께 진행하는 것이 일반적이며, 이 경우 <strong>충치치료 비용</strong>이 크게 증가합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q3: 충치치료 후 통증이 지속되면 어떻게 해야 하나요?<span class="faq-arrow">▼</span></div>
+        <div class="faq-answer">A: 충치치료 후 일시적인 시린 증상이나 통증은 흔하게 발생할 수 있습니다. 특히 깊은 충치를 치료했을 때 더욱 심하며, 보통 며칠에서 몇 주 이내에 사라집니다. 하지만 3주 이상 지속되거나 통증이 심해진다면 신경이 손상되었을 가능성이 있으므로, 치료받은 치과에 재방문하여 검진을 받아야 합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q4: 충치치료 시 레진과 인레이의 <strong>차이점</strong>은 무엇인가요?<span class="faq-arrow">▼</span></div>
+        <div class="faq-answer">A: 레진은 치아에 충전물을 직접 채워 넣는 방식인 반면, 인레이는 본을 떠서 충전물을 제작하여 접착하는 방식입니다. 충치 범위가 좁을 때는 레진을 사용하고, 충치 범위가 넓을 때는 치아 형태를 정교하게 복원하기 위해 인레이를 사용합니다. <strong>가격대</strong>도 인레이가 레진보다 높습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q5: 충치치료 <strong>평균 가격</strong>을 확인할 수 있는 방법이 있나요?<span class="faq-arrow">▼</span></div>
+        <div class="faq-answer">A: 건강보험심사평가원(HIRA) <a href="https://www.hira.or.kr/" target="_blank">비급여 진료비 정보</a>를 통해 비급여 항목의 <strong>평균 가격</strong>을 확인할 수 있습니다. 치과별 <strong>충치치료 비용</strong>을 <strong>비교</strong>해 볼 수 있지만, 실제 진료 <strong>견적</strong>은 치아 상태에 따라 달라지므로 참고 자료로만 활용하는 것이 좋습니다.</div>
+      </div>
+    </section>
+
+    <!-- Section 7: Online Consultation Form -->
+    <section id="contact">
+      <h2>충치치료 온라인 상담 신청</h2>
+      <p>궁금한 <strong>충치치료 견적</strong>이나 치료법에 대해 문의해 주세요. 전문 의료진이 친절하게 상담해 드립니다. <strong>충치치료 가격</strong>, <strong>장단점 비교</strong>, <strong>치과 추천</strong> 등 어떤 질문도 좋습니다.</p>
+      <form action="/submit-consultation" method="post">
+        <p><label for="name">이름:</label><br><input type="text" id="name" name="name" required></p>
+        <p><label for="phone">연락처:</label><br><input type="tel" id="phone" name="phone" placeholder="010-XXXX-XXXX" required></p>
+        <p><label for="email">이메일:</label><br><input type="email" id="email" name="email"></p>
+        <p><label for="inquiryType">문의 유형 (필수 선택):</label><br>
+          <select id="inquiryType" name="inquiryType" required>
+            <option value="">-- 선택하세요 --</option>
+            <option value="price">충치치료 가격 문의</option>
+            <option value="treatment">치료 종류 상담 (레진/인레이/크라운)</option>
+            <option value="appointment">예약 문의</option>
+            <option value="other">기타</option>
+          </select>
+        </p>
+        <p><label for="details">상세 문의 내용 (치아 상태, 궁금한 <strong>비용</strong> 등):</label><br><textarea id="details" name="details" rows="5" placeholder="궁금한 치료 종류와 <strong>견적</strong>을 상세히 적어주시면 정확한 상담에 도움이 됩니다." required></textarea></p>
+        <p><button type="submit">상담 요청하기</button></p>
+      </form>
+      <!-- Contact Info Placeholder -->
+      <p style="text-align: center; margin-top: 20px;">📞 전화: 031-XXX-XXXX</p>
+    </section>
+
+  </div>
+
+  <!-- Javascript for FAQ Accordion functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+          const answer = item.querySelector('.faq-answer');
+          const arrow = item.querySelector('.faq-arrow');
+          const isActive = answer.style.display === 'block';
+
+          // Close all answers first
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+          document.querySelectorAll('.faq-arrow').forEach(arr => arr.style.transform = 'rotate(0deg)');
+          document.querySelectorAll('.faq-item').forEach(itm => itm.classList.remove('active'));
+
+          // Toggle current item's answer
+          if (!isActive) {
+            answer.style.display = 'block';
+            arrow.style.transform = 'rotate(180deg)';
+            item.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+
+  
